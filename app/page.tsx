@@ -26,18 +26,19 @@ export default function Home() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Enter your text here..."
-        className="w-full max-w-2xl h-40 p-4 border rounded-lg mb-4"
+        className="w-full max-w-2xl h-40 p-4 border rounded-lg mb-4 text-gray-800 bg-white"
       />
       <button
         onClick={handleParaphrase}
-        className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+        disabled={loading}
+        className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50"
       >
         {loading ? 'Processing...' : 'Paraphrase'}
       </button>
       {output && (
         <div className="mt-6 w-full max-w-2xl p-4 bg-white rounded-lg border">
-          <h2 className="font-bold mb-2">Result:</h2>
-          <p>{output}</p>
+          <h2 className="font-bold mb-2 text-gray-800">Result:</h2>
+          <p className="text-gray-800">{output}</p>
         </div>
       )}
     </main>
