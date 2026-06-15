@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://my-app-eight-self-83.vercel.app
+
+# Sitemaps
+Sitemap: https://my-app-eight-self-83.vercel.app/sitemap.xml

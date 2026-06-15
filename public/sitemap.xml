@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://my-app-eight-self-83.vercel.app/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <priority>1.0</priority>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap><loc>https://my-app-eight-self-83.vercel.app/sitemap-0.xml</loc></sitemap>
+</sitemapindex>
