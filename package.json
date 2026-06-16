@@ -1,16 +1,16 @@
 {
   "name": "my-app",
   "version": "1.0.0",
-  "description": "My Next.js project with backend server",
-  "main": "backend/server.js",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "backend": "node backend/server.js"
+    "start": "next start"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "next": "^16.2.9",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
   }
 }
