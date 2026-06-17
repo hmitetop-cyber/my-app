@@ -4,8 +4,22 @@ import Navbar from "@/components/Navbar"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "AI Toolkit",
-  description: "Free AI tools to help students, writers, bloggers and professionals.",
+  title: "AI Toolkit | Free AI Writing Tools",
+  description: "AI Toolkit offers free AI-powered writing tools for students, bloggers, and professionals. Rewrite, summarize, humanize, and improve your text instantly.",
+  keywords: ["AI Toolkit", "AI writing tools", "paraphraser", "summarizer", "humanizer", "grammar checker"],
+  robots: "index, follow",
+  openGraph: {
+    title: "AI Toolkit | Free AI Writing Tools",
+    description: "Free AI-powered writing tools to rewrite, summarize, humanize and improve your text instantly.",
+    url: "https://yourdomain.com",
+    siteName: "AI Toolkit",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Toolkit | Free AI Writing Tools",
+    description: "Free AI-powered writing tools to rewrite, summarize, humanize and improve your text instantly.",
+  },
 }
 
 export default function RootLayout({
