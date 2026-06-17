@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-export default function SummarizerPage() {
+export default function HumanizerPage() {
   const [input, setInput] = useState<string>("")
   const [output, setOutput] = useState<string>("")
   const [loading, setLoading] = useState<boolean>(false)
@@ -10,12 +10,12 @@ export default function SummarizerPage() {
   const wordCount = input.trim() ? input.trim().split(/\s+/).length : 0
   const charCount = input.length
 
-  const handleSummarize = async () => {
+  const handleHumanize = async () => {
     if (!input.trim()) return
     setLoading(true)
     setOutput("")
     try {
-      const res = await fetch("/api/summarize", {
+      const res = await fetch("/api/humanize", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: input }),
@@ -44,10 +44,10 @@ export default function SummarizerPage() {
     <main className="min-h-screen bg-white flex flex-col items-center py-16 px-6">
       <section className="w-full max-w-4xl text-center mb-12">
         <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4">
-          AI Summarizer
+          AI Humanizer
         </h1>
         <p className="text-lg md:text-xl text-gray-600">
-          Summarize long text into concise content using AI.
+          Make AI-generated text sound natural, fluent, and human-written.
         </p>
       </section>
 
@@ -55,7 +55,7 @@ export default function SummarizerPage() {
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Paste your text here..."
+          placeholder="Paste your AI-generated text here..."
           className="w-full h-48 p-4 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-gray-900"
         />
 
@@ -66,33 +66,36 @@ export default function SummarizerPage() {
 
         <div className="flex flex-col sm:flex-row gap-4">
           <button
-            onClick={handleSummarize}
+            onClick={handleHumanize}
             disabled={loading}
             className="flex-1 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-200 disabled:opacity-50 flex items-center justify-center"
           >
             {loading ? (
-              <svg
-                className="animate-spin h-5 w-5 text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 01-8 8z"
-                ></path>
-              </svg>
+              <>
+                <svg
+                  className="animate-spin h-5 w-5 text-white mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 01-8 8z"
+                  ></path>
+                </svg>
+                Humanizing...
+              </>
             ) : (
-              "Summarize"
+              "Humanize"
             )}
           </button>
           <button
@@ -105,7 +108,7 @@ export default function SummarizerPage() {
 
         {output && (
           <div className="rounded-xl border border-gray-200 bg-gray-50 shadow-lg p-6 space-y-4">
-            <h2 className="text-2xl font-semibold text-gray-900">Summary</h2>
+            <h2 className="text-2xl font-semibold text-gray-900">Humanized Text</h2>
             <p className="text-gray-800 whitespace-pre-line">{output}</p>
             <button
               onClick={handleCopy}
