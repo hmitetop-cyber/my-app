@@ -1,78 +1,116 @@
-import Link from "next/link"
-import { Metadata } from "next"
+import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - AI Toolkit",
-  description: "Read the privacy policy of AI Toolkit to understand how we collect, use, and protect your data.",
+  title: "Privacy Policy | AI Toolkit",
+  description:
+    "Read the Privacy Policy of AI Toolkit. Learn how we collect, use, and protect your information when using our free AI-powered writing tools.",
+  keywords: [
+    "Privacy Policy",
+    "AI Toolkit",
+    "data security",
+    "cookies",
+    "third-party services",
+  ],
+  robots: "index, follow",
+  openGraph: {
+    title: "Privacy Policy | AI Toolkit",
+    description:
+      "Learn how AI Toolkit collects, uses, and protects your information when using our free AI-powered writing tools.",
+    url: "https://yourdomain.com/privacy-policy",
+    siteName: "AI Toolkit",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | AI Toolkit",
+    description:
+      "Learn how AI Toolkit collects, uses, and protects your information when using our free AI-powered writing tools.",
+  },
 }
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen bg-gray-50 flex flex-col items-center py-16 px-6">
-      <section className="w-full max-w-4xl text-center mb-16">
-        <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">
-          Privacy Policy
-        </h1>
-        <p className="text-lg md:text-xl text-gray-600">Last Updated: June 2026</p>
+    <main className="bg-white text-gray-900 min-h-screen py-16 px-6">
+      <section className="max-w-4xl mx-auto mb-12">
+        <h1 className="text-5xl md:text-6xl font-extrabold mb-6">Privacy Policy</h1>
+        <p className="text-lg text-gray-600 mb-4">Last Updated: June 2026</p>
+        <p className="text-gray-700 text-lg">
+          At AI Toolkit, we value your privacy. This Privacy Policy explains how we
+          collect, use, and protect your information when you use our free AI-powered
+          writing tools.
+        </p>
       </section>
 
-      <section className="w-full max-w-4xl space-y-12 text-gray-700">
-        <article>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Information We Collect</h2>
-          <p className="text-lg leading-relaxed">
-            We collect information you provide directly, such as when you use our tools or contact us. We may also
-            collect usage data to improve our services.
+      <section className="max-w-4xl mx-auto space-y-12">
+        <div>
+          <h2 className="text-2xl font-bold mb-4">Information We Collect</h2>
+          <p className="text-gray-700">
+            We may collect non-personal information such as usage data, browser type,
+            and device information to improve our services. We do not require personal
+            accounts at this time.
           </p>
-        </article>
+        </div>
 
-        <article>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Cookies Usage</h2>
-          <p className="text-lg leading-relaxed">
-            AI Toolkit uses cookies to enhance your browsing experience, remember preferences, and analyze site
-            performance.
+        <div>
+          <h2 className="text-2xl font-bold mb-4">How We Use Information</h2>
+          <p className="text-gray-700">
+            Information collected is used to enhance user experience, improve tool
+            performance, and maintain security. We do not sell or share your data with
+            unauthorized third parties.
           </p>
-        </article>
+        </div>
 
-        <article>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Analytics Usage</h2>
-          <p className="text-lg leading-relaxed">
-            We use analytics tools to understand how users interact with our website, helping us improve functionality
-            and content.
+        <div>
+          <h2 className="text-2xl font-bold mb-4">Cookies</h2>
+          <p className="text-gray-700">
+            AI Toolkit may use cookies to remember preferences and provide a smoother
+            user experience. You can disable cookies in your browser settings if you
+            prefer.
           </p>
-        </article>
+        </div>
 
-        <article>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Third-Party Services</h2>
-          <p className="text-lg leading-relaxed">
-            Our website may integrate third-party services. These providers may collect information in accordance with
-            their own privacy policies.
+        <div>
+          <h2 className="text-2xl font-bold mb-4">Third-Party Services</h2>
+          <p className="text-gray-700">
+            We may integrate third-party services such as analytics tools to monitor
+            usage trends. These services have their own privacy policies, which we
+            encourage you to review.
           </p>
-        </article>
+        </div>
 
-        <article>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">User Rights</h2>
-          <p className="text-lg leading-relaxed">
-            You have the right to access, update, or delete your personal information. You may also opt out of certain
-            data collection practices.
+        <div>
+          <h2 className="text-2xl font-bold mb-4">Data Security</h2>
+          <p className="text-gray-700">
+            We implement reasonable security measures to protect your information from
+            unauthorized access, alteration, or disclosure. However, no method of
+            transmission over the internet is completely secure.
           </p>
-        </article>
+        </div>
 
-        <article>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Data Security</h2>
-          <p className="text-lg leading-relaxed">
-            We implement industry-standard security measures to protect your information from unauthorized access,
-            disclosure, or misuse.
+        <div>
+          <h2 className="text-2xl font-bold mb-4">Children&apos;s Privacy</h2>
+          <p className="text-gray-700">
+            AI Toolkit is not directed toward children under 13. We do not knowingly
+            collect personal information from children. If you believe a child has
+            provided us with information, please contact us.
           </p>
-        </article>
-      </section>
+        </div>
 
-      <section className="text-center mt-16">
-        <Link
-          href="/"
-          className="inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-lg hover:bg-indigo-700 transition-colors duration-200"
-        >
-          Back to Home
-        </Link>
+        <div>
+          <h2 className="text-2xl font-bold mb-4">Changes to This Policy</h2>
+          <p className="text-gray-700">
+            We may update this Privacy Policy from time to time. Any changes will be
+            posted on this page with an updated revision date.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-2xl font-bold mb-4">Contact</h2>
+          <p className="text-gray-700">
+            If you have questions or concerns about this Privacy Policy, please use the
+            contact form on our website.
+          </p>
+        </div>
       </section>
     </main>
   )
