@@ -5,9 +5,12 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://aitoolkit.space"),
+
   title: "AI Toolkit | Free AI Writing Tools",
   description:
     "AI Toolkit offers free AI-powered writing tools for students, bloggers, and professionals. Rewrite, summarize, humanize, and improve your text instantly.",
+
   keywords: [
     "AI Toolkit",
     "AI writing tools",
@@ -16,15 +19,18 @@ export const metadata: Metadata = {
     "humanizer",
     "grammar checker",
   ],
+
   robots: "index, follow",
+
   openGraph: {
     title: "AI Toolkit | Free AI Writing Tools",
     description:
       "Free AI-powered writing tools to rewrite, summarize, humanize and improve your text instantly.",
-    url: "https://yourdomain.com",
+    url: "https://aitoolkit.space",
     siteName: "AI Toolkit",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "AI Toolkit | Free AI Writing Tools",
@@ -41,7 +47,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col bg-gray-50">
-        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-C0QCD3F9KP"
           strategy="afterInteractive"
@@ -52,7 +57,6 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-C0QCD3F9KP');
           `}
         </Script>
@@ -70,31 +74,19 @@ export default function RootLayout({
                 Home
               </Link>
 
-              <Link
-                href="/tools"
-                className="text-gray-600 hover:text-blue-600"
-              >
+              <Link href="/tools" className="text-gray-600 hover:text-blue-600">
                 AI Tools
               </Link>
 
-              <Link
-                href="/blog"
-                className="text-gray-600 hover:text-blue-600"
-              >
+              <Link href="/blog" className="text-gray-600 hover:text-blue-600">
                 Blog
               </Link>
 
-              <Link
-                href="/about"
-                className="text-gray-600 hover:text-blue-600"
-              >
+              <Link href="/about" className="text-gray-600 hover:text-blue-600">
                 About
               </Link>
 
-              <Link
-                href="/contact"
-                className="text-gray-600 hover:text-blue-600"
-              >
+              <Link href="/contact" className="text-gray-600 hover:text-blue-600">
                 Contact
               </Link>
 
@@ -105,10 +97,7 @@ export default function RootLayout({
                 Privacy Policy
               </Link>
 
-              <Link
-                href="/terms"
-                className="text-gray-600 hover:text-blue-600"
-              >
+              <Link href="/terms" className="text-gray-600 hover:text-blue-600">
                 Terms
               </Link>
             </div>
