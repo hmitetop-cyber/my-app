@@ -47,6 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col bg-gray-50">
+        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-C0QCD3F9KP"
           strategy="afterInteractive"
@@ -57,15 +58,23 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+
             gtag('config', 'G-C0QCD3F9KP');
           `}
         </Script>
 
+        {/* Google AdSense */}
+        <Script
+          id="google-adsense"
+          async
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7288895045646466"
+          crossOrigin="anonymous"
+        />
+
         <Navbar />
 
-        <main className="flex-1">
-          {children}
-        </main>
+        <main className="flex-1">{children}</main>
 
         <footer className="bg-gray-100 border-t py-10 px-6">
           <div className="max-w-7xl mx-auto text-center space-y-6">
@@ -74,19 +83,31 @@ export default function RootLayout({
                 Home
               </Link>
 
-              <Link href="/tools" className="text-gray-600 hover:text-blue-600">
+              <Link
+                href="/tools"
+                className="text-gray-600 hover:text-blue-600"
+              >
                 AI Tools
               </Link>
 
-              <Link href="/blog" className="text-gray-600 hover:text-blue-600">
+              <Link
+                href="/blog"
+                className="text-gray-600 hover:text-blue-600"
+              >
                 Blog
               </Link>
 
-              <Link href="/about" className="text-gray-600 hover:text-blue-600">
+              <Link
+                href="/about"
+                className="text-gray-600 hover:text-blue-600"
+              >
                 About
               </Link>
 
-              <Link href="/contact" className="text-gray-600 hover:text-blue-600">
+              <Link
+                href="/contact"
+                className="text-gray-600 hover:text-blue-600"
+              >
                 Contact
               </Link>
 
@@ -97,7 +118,10 @@ export default function RootLayout({
                 Privacy Policy
               </Link>
 
-              <Link href="/terms" className="text-gray-600 hover:text-blue-600">
+              <Link
+                href="/terms"
+                className="text-gray-600 hover:text-blue-600"
+              >
                 Terms
               </Link>
             </div>
