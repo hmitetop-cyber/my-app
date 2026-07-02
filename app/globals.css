@@ -23,66 +23,73 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
-/* ===============================
+}/* ===============================
    Animated Background
 ================================= */
 
 body {
   position: relative;
+  overflow-x: hidden;
   isolation: isolate;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: 0;
+  pointer-events: none;
+  z-index: -1;
 
   background:
-    radial-gradient(circle at 15% 20%, rgba(59,130,246,.14), transparent 28%),
-    radial-gradient(circle at 85% 30%, rgba(139,92,246,.12), transparent 30%),
-    radial-gradient(circle at 70% 80%, rgba(6,182,212,.12), transparent 25%),
-    linear-gradient(180deg,#ffffff,#f8fbff);
+    radial-gradient(circle at 15% 20%, rgba(59,130,246,.25), transparent 30%),
+    radial-gradient(circle at 85% 25%, rgba(139,92,246,.20), transparent 30%),
+    radial-gradient(circle at 70% 80%, rgba(6,182,212,.18), transparent 25%);
 
-  background-size: 160% 160%;
-  animation: gradientMove 25s ease infinite;
+  filter: blur(40px);
+
+  animation: floatBackground 20s ease-in-out infinite alternate;
 }
 
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: 1;
   pointer-events: none;
+  z-index: -1;
 
   background-image:
-    radial-gradient(rgba(59,130,246,.08) 2px, transparent 2px);
+    radial-gradient(rgba(59,130,246,.12) 1.5px, transparent 1.5px);
 
-  background-size: 40px 40px;
+  background-size: 55px 55px;
 
-  animation: floatDots 30s linear infinite;
+  opacity: .45;
+
+  animation: dotsMove 40s linear infinite;
 }
 
-@keyframes gradientMove {
+@keyframes floatBackground {
   0% {
-    background-position: 0% 50%;
+    transform: translate(0,0) scale(1);
   }
 
   50% {
-    background-position: 100% 50%;
+    transform: translate(30px,-20px) scale(1.05);
   }
 
   100% {
-    background-position: 0% 50%;
+    transform: translate(-20px,20px) scale(1);
   }
 }
 
-@keyframes floatDots {
+@keyframes dotsMove {
   from {
     transform: translateY(0);
   }
 
   to {
-    transform: translateY(-40px);
+    transform: translateY(-80px);
   }
 }
