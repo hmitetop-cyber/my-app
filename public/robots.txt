@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://my-app-eight-self-83.vercel.app
+Host: https://aitoolkit.space
 
 # Sitemaps
-Sitemap: https://my-app-eight-self-83.vercel.app/sitemap.xml
+Sitemap: https://aitoolkit.space/sitemap.xml
