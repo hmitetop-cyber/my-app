@@ -30,14 +30,13 @@ body {
 
 body {
   position: relative;
-  overflow-x: hidden;
+  isolation: isolate;
 }
-
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -2;
+  z-index: 0;
 
   background:
     radial-gradient(circle at 15% 20%, rgba(59,130,246,.14), transparent 28%),
@@ -53,7 +52,7 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 1;
   pointer-events: none;
 
   background-image:
