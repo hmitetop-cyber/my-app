@@ -126,3 +126,13 @@ export default function Home() {
     </main>
   )
 }
+import Image from "next/image";
+
+<Image
+  src="/hero-illustration.png"
+  alt="AI Toolkit Hero Illustration"
+  width={700}
+  height={600}
+  priority
+  className="w-full h-auto"
+/>
