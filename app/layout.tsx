@@ -81,6 +81,26 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
+       <Script
+        id="schema-org"
+        type="application/ld+json"
+       strategy="afterInteractive"
+>
+       {JSON.stringify({
+       "@context": "https://schema.org",
+       "@type": "WebSite",
+       name: "AI Toolkit",
+         url: "https://aitoolkit.space",
+       description:
+        "Free AI-powered writing tools to rewrite, summarize, humanize and improve your text instantly.",
+      potentialAction: {
+         "@type": "SearchAction",
+      target: "https://aitoolkit.space/tools?search={search_term_string}",
+         "query-input": "required name=search_term_string",
+    },
+  })}
+</Script>
+
         <Navbar />
 
         <main className="flex-1">{children}</main>
