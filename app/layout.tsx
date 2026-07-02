@@ -20,28 +20,7 @@ export const metadata: Metadata = {
     "grammar checker",
   ],
 
-  authors: [
-    {
-      name: "AI Toolkit",
-    },
-  ],
-
-  creator: "AI Toolkit",
-  publisher: "AI Toolkit",
-  category: "Technology",
-
-  alternates: {
-    canonical: "https://aitoolkit.space",
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
+  robots: "index, follow",
 
   openGraph: {
     title: "AI Toolkit | Free AI Writing Tools",
@@ -50,7 +29,6 @@ export const metadata: Metadata = {
     url: "https://aitoolkit.space",
     siteName: "AI Toolkit",
     type: "website",
-    locale: "en_US",
     images: [
       {
         url: "/og-image.png",
@@ -67,12 +45,6 @@ export const metadata: Metadata = {
     description:
       "Free AI-powered writing tools to rewrite, summarize, humanize and improve your text instantly.",
     images: ["/og-image.png"],
-  },
-
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
   },
 };
 
